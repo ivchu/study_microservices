@@ -1,0 +1,17 @@
+server:
+  port: 8080
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  application:
+    name: cloud-eureca-server
+
+logging:
+  level:
+    org:
+      nipu: DEBUG

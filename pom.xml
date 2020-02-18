@@ -25,7 +25,9 @@
     </properties>
 
     <modules>
+        <module>zuul-gateway</module>
         <module>pc</module>
         <module>po</module>
+        <module>eureca</module>
     </modules>
 </project>

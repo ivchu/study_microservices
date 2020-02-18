@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      host: localhost
+      name: embeded_db
+  application:
+    name: cloud-api-gateway
+  main:
+    allow-bean-definition-overriding: true
+zuul:
+  routes:
+    catalog:
+      serviceId: cloud-product-catalog
+      path: /catalog/**
+      stripPrefix: false
+    order:
+      serviceId: cloud-product-order
+      path: /order/**
+      stripPrefix: false
+eureka:
+  client:
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
